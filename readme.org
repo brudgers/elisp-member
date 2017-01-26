@@ -1,0 +1,2 @@
+This project uses literate programming:
+The annotated source code is available at https://brudgers.github.io/elisp-member/
