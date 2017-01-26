@@ -1,6 +1,10 @@
 #+TITLE: Emacs Lisp: Value-in-list
 
-This function =value-in-list= implements so of the functionality associated with Common Lisp's implementation of =member=. In particular it implements an optional =test= parameter.
+This function,
+#+BEGIN_EXAMPLE
+ =value-in-list=
+#+END_EXAMPLE
+implements some of the functionality associated with Common Lisp's implementation of =member=. In particular it implements an optional =test= parameter.
 
 * RATIONALE 
 Emacs Lisp's =member= function compares a value to the contents of a list using equality. Emacs Lisp [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Sets-And-Lists.html][contains additional functions]] to determine membership based on stricter and looser criteria for determining under set semantics.
@@ -16,7 +20,7 @@ Or based on strict identity with =memq=:
 #+BEGIN_EXAMPLE
 ELSIP> (let ((a 'b))
           (memq a '(c b d)))
-(b d)b
+(b d)
 #+END_EXAMPLE
 But there is not a function for working with numerical values of different types:
 #+BEGIN_EXAMPLE
@@ -28,7 +32,7 @@ nil
 
 #+BEGIN_SRC elisp :tangle yes
   (defun value-in-list (value list &optional test)
-  "Uses test to determin if value is in list.
+  "Uses test to determine if value is in list.
    If value is in in list, returns the cdr of the list
    which begins with value: the return value mimics the behavior of MEMBER.
    Example: (my-member 3.0 '(1 2 3) '=) -> (3)
@@ -99,5 +103,5 @@ M-x org-babel-execute-src-block
 #+END_SRC 
 
 #+RESULTS: generate-files
-: Files Generated: Thu Jan 26 14:25:39 2017
+: Files Generated: Thu Jan 26 14:43:06 2017
 

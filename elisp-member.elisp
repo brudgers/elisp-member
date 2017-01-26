@@ -1,6 +1,6 @@
 
 (defun value-in-list (value list &optional test)
-"Uses test to determin if value is in list.
+"Uses test to determine if value is in list.
  If value is in in list, returns the cdr of the list
  which begins with value: the return value mimics the behavior of MEMBER.
  Example: (my-member 3.0 '(1 2 3) '=) -> (3)
