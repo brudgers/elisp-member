@@ -1,2 +1,6 @@
-This project uses literate programming:
-The annotated source code is available at https://brudgers.github.io/elisp-member/
+
+
+This project:
+
+1. Uses literate programming: The annotated source code is available at https://brudgers.github.io/elisp-member/
+2. Is in support of my response to [[http://codereview.stackexchange.com/questions/146011/checking-if-val-is-present-in-list/153703#153703][this question on CodeRview.StackExchange.com]]
