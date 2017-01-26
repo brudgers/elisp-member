@@ -1,0 +1,23 @@
+
+(defun value-in-list (value list &optional test)
+"Uses test to determin if value is in list.
+ If value is in in list, returns the cdr of the list
+ which begins with value: the return value mimics the behavior of MEMBER.
+ Example: (my-member 3.0 '(1 2 3) '=) -> (3)
+          (my-member '(1) '((1) (2) (3)) 'eq) -> nil
+ Remarks: This function could in theory be structured as the local function
+ 'my-member, but Emacs-Lisp runs out of stack space if 'eq or 'eql are passed
+ to 'my-member within another function. Seems like a bug."
+(let
+    ((my-member (lambda (value list test)
+                  (if (funcall test value (car list))
+                      list
+                    (my-member value (cdr list) test)))))
+  (cond
+   ((null test)
+    (member value list))
+   ((eq test 'eq)
+    (memq value list))
+   ((eq test 'eql)
+    (memql value list))
+   (t (funcall my-member value list test)))))
