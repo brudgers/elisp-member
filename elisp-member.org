@@ -1,5 +1,6 @@
-#+TITLE Emacs Lisp: Value-in-list
-This function implements so of the functionality associated with Common Lisp's implementation of =member=. In particular it implements an optional =test= parameter.
+#+TITLE: Emacs Lisp: Value-in-list
+
+This function =value-in-list= implements so of the functionality associated with Common Lisp's implementation of =member=. In particular it implements an optional =test= parameter.
 
 * RATIONALE 
 Emacs Lisp's =member= function compares a value to the contents of a list using equality. Emacs Lisp [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Sets-And-Lists.html][contains additional functions]] to determine membership based on stricter and looser criteria for determining under set semantics.
@@ -79,7 +80,11 @@ ELISP> (value-in-list 2
 ** Using this file
 1. The output for this file is =elisp-member.el=
 2. The web page for this file is =docs/index.html=. It is structured to work with Github pages.
-3. To generate these files, navigate into the source block and use =M-x org-babel-execute-src-block=. 
+3. To generate the files, navigate into the source block below and use:
+#+BEGIN_EXAMPLE
+M-x org-babel-execute-src-block 
+#+END_EXAMPLE
+
 #+NAME: generate-files
 #+BEGIN_SRC elisp
   ;; generate elisp-member.el
@@ -92,3 +97,7 @@ ELISP> (value-in-list 2
     (kill-buffer))
   (concat "Files Generated: " (current-time-string))
 #+END_SRC 
+
+#+RESULTS: generate-files
+: Files Generated: Thu Jan 26 14:25:39 2017
+

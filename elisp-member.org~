@@ -15,7 +15,7 @@ Or based on strict identity with =memq=:
 #+BEGIN_EXAMPLE
 ELSIP> (let ((a 'b))
           (memq a '(c b d)))
-(b d)
+(b d)b
 #+END_EXAMPLE
 But there is not a function for working with numerical values of different types:
 #+BEGIN_EXAMPLE

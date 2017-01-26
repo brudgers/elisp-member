@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>elisp-member</title>
-<!-- 2017-01-26 Thu 14:25 -->
+<title>Emacs Lisp: Value-in-list</title>
+<!-- 2017-01-26 Thu 14:34 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="benrudgers" />
@@ -137,7 +137,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">elisp-member</h1>
+<h1 class="title">Emacs Lisp: Value-in-list</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -157,8 +157,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <p>
-#+TITLE Emacs Lisp: Value-in-list
-This function implements so of the functionality associated with Common Lisp's implementation of <code>member</code>. In particular it implements an optional <code>test</code> parameter.
+This function <code>value-in-list</code> implements so of the functionality associated with Common Lisp's implementation of <code>member</code>. In particular it implements an optional <code>test</code> parameter.
 </p>
 
 <div id="outline-container-sec-1" class="outline-2">
@@ -265,9 +264,13 @@ ELISP&gt; (value-in-list 2
 </li>
 <li>The web page for this file is <code>docs/index.html</code>. It is structured to work with Github pages.
 </li>
-<li>To generate these files, navigate into the source block and use <code>M-x org-babel-execute-src-block</code>. 
+<li>To generate the files, navigate into the source block below and use:
 </li>
 </ol>
+<pre class="example">
+M-x org-babel-execute-src-block
+</pre>
+
 <div class="org-src-container">
 
 <pre class="src src-elisp" id="generate-files">;; generate elisp-member.el
@@ -287,7 +290,7 @@ ELISP&gt; (value-in-list 2
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: benrudgers</p>
-<p class="date">Created: 2017-01-26 Thu 14:25</p>
+<p class="date">Created: 2017-01-26 Thu 14:34</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
